@@ -1,0 +1,26 @@
+{
+  "presets": [
+    "@babel/preset-flow",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-flow-strip-types",
+    [
+      "module-resolver",
+      {
+        "root": ["./app"],
+        "alias": {
+          "lib": "./lib"
+        }
+      }
+    ]
+  ]
+}
